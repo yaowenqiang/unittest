@@ -11,7 +11,9 @@
             $baseball = new Baseball();
             $result = $baseball->calc_avg($atbats,$hits);
             $expectResult = $hits/$atbats;
-            $this->assertEquals($expectResult,$result);
+            $formatexpectedresult = number_format($hits/$atbats,3);
+            $this->assertEquals($formatexpectedresult,$result);
+            /* $this->assertEquals($expectResult,$result); */
         }
     }
 ?>
