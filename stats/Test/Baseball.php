@@ -15,7 +15,7 @@ class Baseball
         }
         else
         {
-            $avg = $hits/$ab;
+            $avg = number_format($hits/$ab,3);
         }
         return $avg;
     }
