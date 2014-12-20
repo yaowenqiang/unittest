@@ -30,17 +30,17 @@ class Baseball
      * @return void
      * @author Steve Francia <steve.francia@gmail.com>
      */
-    public function calc_abp($ab,$bb,$hp,$sac,$hits)
+    public function calc_obp($ab,$bb,$hp,$sac,$hits)
     {
         if (!($total=$ab + $bb + $hp + $sac)) {
             $avg = "0.000";
         }
         else
         {
-            $abp = number_format(($hits + $bb + $hp + $sac) / $total,3);
+            $obp = number_format(($hits + $bb + $hp + $sac) / $ab,3);
         }
-        return $abp;
-    }//end calc_abp
+        return $obp;
+    }//end calc_obp
 
     /**
      * calcuate slugging percentage
@@ -65,10 +65,8 @@ class Baseball
      * @return
      * @author Steve Francia <steve.francia@gmail.com>
      */
-    private function calc_ops($ab,$singles,$doubles,$triples,$hr)
+    private function calc_ops($opb,$slg)
     {
-        $slg = number_format((($singles*1) + ($doubles*2) + ($triples*3) + ($hr*4))/$ab,3);
-        $obp = number_format(($hits+$bb+$hp+$sac)/$ab,3);
         $ops = $slg + $obp;
         return $ops;
     }
