@@ -1,7 +1,7 @@
 <?php
     namespace stats\Test;
     use stats\Baseball;
-    require "Baseball.php";
+    require_once "Baseball.php";
     class BaseballTest extends \PHPUnit_Framework_TestCase
     {
         public function testCalcAvgEquals()
