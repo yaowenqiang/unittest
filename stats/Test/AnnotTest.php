@@ -12,6 +12,11 @@
          */
         public function testCalc($atbats,$hits)
         {
+            if(!is_numeric($atbats)){
+                $avg = "Not a number";
+                return $avg;
+                exit();
+            }
             $baseball = new Baseball();
             $result = $baseball->calc_avg($atbats,$hits);
             $expectResult = $hits/$atbats;
