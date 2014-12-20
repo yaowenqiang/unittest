@@ -15,5 +15,23 @@
             $this->assertEquals($formatexpectedresult,$result);
             /* $this->assertEquals($expectResult,$result); */
         }
+        /**
+         * undocumented public function ()
+         {
+
+         }
+         *
+         * @return void
+         * @author Steve Francia <steve.francia@gmail.com>
+         */
+        public function testCalcHitsAreStrings()
+        {
+            $atbats = 389;
+            $hits = 'wefwf';
+            $baseball = new Baseball();
+            $result = $baseball->calc_avg($atbats,$hits);
+            $formatexpectedresult = 0.000;
+            $this->assertEquals($formatexpectedresult,$result);
+        }
     }
 ?>
