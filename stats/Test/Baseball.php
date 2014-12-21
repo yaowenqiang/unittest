@@ -65,7 +65,7 @@ class Baseball
      * @return
      * @author Steve Francia <steve.francia@gmail.com>
      */
-    private function calc_ops($opb,$slg)
+    public function calc_ops($opb,$slg)
     {
         $ops = $slg + $obp;
         return $ops;
